@@ -202,7 +202,8 @@ namespace CSRedis.Internal.Utilities
             var d = Expression.Parameter(d_t, "d");
             var d_mi_get_enumerator = d_t.GetMethod("GetEnumerator");
 
-            var fc_t = typeof(LocalVariableInfo);
+            //var fc_t = typeof(LocalVariableInfo);
+            var fc_t = typeof(FormatterConverter);
             var fc = Expression.Variable(fc_t, "fc");
             var fc_init = Expression.MemberInit(Expression.New(fc_t));
 
